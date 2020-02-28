@@ -769,6 +769,14 @@ class Invoice extends Remote\Model
         return $this->_data['AmountDue'];
     }
 
+    public function setAmountDue($value)
+    {
+        $this->propertyUpdated('AmountDue', $value);
+        $this->_data['AmountDue'] = $value;
+
+        return $this;
+    }
+
     /**
      * @return float
      */
